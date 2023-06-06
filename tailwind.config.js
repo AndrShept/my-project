@@ -9,7 +9,10 @@ export default {
       },
       colors:{
         conduit: {
-          green: '#5cb85c'
+          green: '#5cb85c',
+          darkGreen: '#4b974b',
+          gray: '#bbb',
+          black: '#373a3c'
         }
       }
     },

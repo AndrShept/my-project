@@ -21,7 +21,7 @@ export const Header: FC = () => {
                   to={item.href}
                   className={({ isActive }) =>
                     cn(
-                      'text-black/30 py-[.425rem] hover:text-black/60 ease-linear duration-100',
+                      'text-black/30 py-[.425rem] hover:text-black/60 hover:no-underline ease-linear duration-100',
                       {
                         'text-black/80': isActive,
                       }

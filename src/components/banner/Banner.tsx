@@ -12,6 +12,7 @@ export const Banner: FC = () => {
           <p className='text-center text-[1.5rem]  font-light '>
             A place to share your knowledge.
           </p>
+
         </Container>
       </div>
     </>
