@@ -7,6 +7,7 @@ export default {
         titillium :['Titillium Web', 'sans-serif'],
         sourceSans: ['Source Sans Pro',' sans-serif']
       },
+   
       colors:{
         conduit: {
           green: '#5cb85c',

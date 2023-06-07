@@ -1,14 +1,9 @@
-import { Article } from './components/article/Article';
-import { Banner } from './components/banner/Banner';
-import { Header } from './components/header/Header';
+import { MainPage } from './components/pages/MainPage';
 
 function App() {
   return (
     <>
-      <Header/>
-      <Banner/>
-      <Article/>
-     
+      <MainPage />
     </>
   );
 }

@@ -7,16 +7,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+  
+ 
 }
 body {
   font-family: 'Source Sans Pro', sans-serif;
+ 
 }
 
 a {
 color: #5cb85c;
 &:hover{
   color: #4b974b;
-  text-decoration: underline;
+
 }
 }
 a:hover {
