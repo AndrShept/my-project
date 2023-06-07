@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { FaRegHeart } from 'react-icons/fa';
-import { Container } from '../container/Container';
-import { FavoriteButton } from '../favorit-button/FavoriteButton';
+import { FavoriteButton } from '../favorite-button/favorite';
+import { TagList } from '../tag-list/TagList';
 
 export const Article: FC = () => {
   return (
@@ -25,18 +24,32 @@ export const Article: FC = () => {
                 9 october, 2022
               </span>
             </div>
-      
           </div>
 
           <FavoriteButton />
         </div>
       </div>
       <Link to='/article/qwer' className='hover:no-underline'>
-        <h1 className='text-conduit-black mb-1 font-semibold text-2xl'> If we quantify the alarm, we can get to the FTP pixel through the online SSL interface!</h1>
-        <p className='text-conduit-gray'>Omnis perspiciatis qui quia commodi sequi modi. Nostrum quam aut cupiditate est facere omnis possimus. Tenetur similique nemo illo soluta molestias facere quo. Ipsam totam facilis delectus nihil quidem soluta vel est omnis.</p>
-        <p className='text-conduit-gray mt-6'>Read more...</p>
+        <h1 className='text-conduit-black mb-1 font-semibold text-2xl'>
+          {' '}
+          If we quantify the alarm, we can get to the FTP pixel through the
+          online SSL interface!
+        </h1>
+        <p className='text-conduit-gray'>
+          Omnis perspiciatis qui quia commodi sequi modi. Nostrum quam aut
+          cupiditate est facere omnis possimus. Tenetur similique nemo illo
+          soluta molestias facere quo. Ipsam totam facilis delectus nihil quidem
+          soluta vel est omnis.
+        </p>
+
+        <div className='flex justify-between items-center'>
+          
+          <p className='text-conduit-gray mt-6 text-[0.8rem] font-light '>Read more...</p>
+          <TagList />
+        </div>
       </Link>
-      <hr className='bg-conduit-gray mt-6'/>
+
+      <hr className='bg-conduit-gray mt-6' />
     </article>
   );
 };
