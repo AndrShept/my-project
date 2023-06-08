@@ -1,7 +1,20 @@
-import React,{FC, PropsWithChildren} from 'react'
+import React, { FC, ReactNode } from 'react';
+import cn from 'clsx';
 
-export const Container:FC<PropsWithChildren> = ({children}) => {
-  return (
-    <div className='container mx-auto px-4 '>{children}</div>
-  )
+interface IContainer {
+  children: ReactNode;
+  center?: boolean;
+  className?: string
 }
+
+export const Container: FC<IContainer> = ({ children, center = false, className }) => {
+  return (
+    <div
+      className={cn('container mx-auto px-4 ', className, {
+        'flex items-center justify-center min-h-max': center,
+      })}
+    >
+      {children}
+    </div>
+  );
+};

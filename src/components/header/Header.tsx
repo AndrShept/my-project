@@ -18,7 +18,7 @@ export const Header: FC = () => {
             </Link>
             <ul className='list-none flex gap-4'>
               {navMenu.map((item) => (
-                <li>
+                <li key={item.href}>
                   <NavLink
                     to={item.href}
                     className={({ isActive }) =>

@@ -1,4 +1,3 @@
-import { createApi } from '@reduxjs/toolkit/query';
 import type { BaseQueryFn } from '@reduxjs/toolkit/query';
 import axios from 'axios';
 import type { AxiosRequestConfig, AxiosError } from 'axios';
@@ -30,17 +29,3 @@ export const axiosBaseQuery =
       };
     }
   };
-
-const api = createApi({
-  baseQuery: axiosBaseQuery({
-    baseUrl: 'https://example.com',
-  }),
-  endpoints(build) {
-    return {
-      query: build.query({ query: () => ({ url: '/query', method: 'get' }) }),
-      mutation: build.mutation({
-        query: () => ({ url: '/mutation', method: 'post' }),
-      }),
-    };
-  },
-});
