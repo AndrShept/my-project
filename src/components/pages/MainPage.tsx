@@ -9,15 +9,10 @@ import { useGetGlobalFeedQuery } from '../../api/repository';
 import { Spinner } from '../spinner/Spinner';
 
 export const MainPage: FC = () => {
-  const { data, error, isLoading } = useGetGlobalFeedQuery('');
-  console.log(data);
-  if (isLoading) {
-    return (
-      <Container>
-        <Spinner className='h-12 w-12' />
-      </Container>
-    );
-  }
+  const [page, setPage] = React.useState(1)
+  const { data, error, isLoading } = useGetGlobalFeedQuery({page : page + 1});
+  console.log(data?.articlesCount);
+
   if (error) {
     return <Container> Feed ERROR loading... </Container>;
   }
@@ -25,15 +20,20 @@ export const MainPage: FC = () => {
   return (
     <section>
       <Header />
+
       <Banner />
 
       <Container>
-        <div className='flex justify-center'>
+        <div className='flex justify-between'>
           <div className='w-2/3'>
             <FeedToggle />
-            {data?.articles.map((article) => (
-              <Article article={article} key={article.slug}/>
-            ))}
+            {isLoading ? (
+              <Spinner className='h-12 w-12' />
+            ) : (
+         
+                <Article articles={data?.articles} page={page} setPage={setPage}  pageCount={data?.articlesCount} />
+            
+            )}
           </div>
           <div>
             <PopularTags />

@@ -2,7 +2,7 @@ import React from 'react';
 
 export const PopularTags = () => {
   return (
-    <div className='w-[150px]  bg-[#f3f3f3] p-2  ml-10 rounded-[4px]'>
+    <div className='min-w-min  bg-[#f3f3f3] p-2  ml-10 rounded-[4px]'>
       <span className='text-conduit-black '>Popular Tags</span>
 
       <ul className='flex  gap-2 flex-wrap  min-h-min mt-2 '>
